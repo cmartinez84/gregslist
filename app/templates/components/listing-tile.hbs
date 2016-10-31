@@ -1,6 +1,11 @@
-<div class="well">
-{{#link-to "listing" listing.id}}<h3>{{listing.title}}</h3>{{/link-to}}
-<h5>posted by  {{listing.author}}  {{moment-from-now listing.date}}</h5>
+<div class="well listing">
 
-  <img src="{{listing.image}}" alt="" onerror="this.src='http://www.hardwickagriculture.org/blog/wp-content/uploads/placeholder.jpg'" />
+  <div class="col-xs-3">
+      <img class="img-responsive" src="{{listing.image}}" alt="" onerror="this.src='http://www.hardwickagriculture.org/blog/wp-content/uploads/placeholder.jpg'" />
+  </div>
+  <div class="col-xs-8">
+    {{#link-to "listing" listing.id}}<h3>{{listing.title}}</h3>{{/link-to}}
+    <h5>posted by  {{listing.author}}  {{moment-from-now listing.date}}</h5>
+
+  </div>
 </div>
