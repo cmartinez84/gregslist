@@ -1,12 +1,12 @@
 <div class="well">
   <label for="">Title</label>
-  {{input value=title id="title"}}
+  {{input value=title id="title" enter="post"}}
   <label for="">Image</label>
-  {{input value=image id="image"}}
+  {{input value=image id="image"  enter="post"}}
   <label for="">Content</label>
-  {{input value=content id="content"}}
+  {{input value=content id="content"  enter="post"}}
   <label for="">Author</label>
-  {{input value=author id="author"}}
-  <button {{action "post" category}}>Add listing</button>
+  {{input value=author id="author"  enter="post"}}
+  <button {{action "post"}}>Add listing</button>
 </div>
 {{category.name}}
