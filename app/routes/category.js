@@ -12,10 +12,10 @@ export default Ember.Route.extend({
       newListing.save().then(function(){
         return category.save();
       });
-      this.refresh();
+      this.transitionTo('category');
     },
-    changePage(){
-      this.refresh('category');
+    selectRefresh() {
+      this.refresh();
     }
   }
 

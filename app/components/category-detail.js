@@ -5,7 +5,7 @@ export default Ember.Component.extend({
   sortBy: ['date:desc'],
   page: 1,
   sortedListings: Ember.computed.sort('category.listings', "sortBy"),
-  pageListings: Ember.computed("sortedListings",function(){
+  pageListings: Ember.computed("sortedListings", "page", function(){
     var output = [];
     var offset = (this.get('page')-1) * 5;
     var i = 0;
@@ -32,21 +32,11 @@ export default Ember.Component.extend({
     let selectedIndex = this.$('#sortListings').val();
       console.log(selectedIndex);
       this.set('sortBy', [selectedIndex]);
+      this.sendAction("selectRefresh");
     },
     getPage(page){
       this.set("page", page);
-      var output = [];
-      var offset = (this.get('page')-1) * 5;
-      var i = 0;
-      while (i < 5) {
-        if (this.get('sortedListings')[offset]){
-          output.push(this.get('sortedListings')[offset]);
-        }
-        i++;
-        offset++;
       }
-      this.set("pageListings", output);
-    }
     }
 
 

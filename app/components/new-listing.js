@@ -8,7 +8,7 @@ export default Ember.Component.extend({
         image: this.get('image'),
         content: this.get('content'),
         author: this.get('author'),
-        date: moment().format("LLLL"),
+        date: moment(),
         category: this.get('category')
       };
       if(params['title'] && params['content'] && params['author']){
