@@ -1,0 +1,10 @@
+<div class="well">
+  <label for="">Search:</label>
+  {{input value=searchTerm id="searchTerm" placeholder="search term" enter="search"}}
+  <button {{action "search"}}></button>
+</div>
+<div class="results">
+  {{#each filteredListings as |listing|}}
+    {{listing-tile listing=listing}}
+  {{/each}}
+</div>
