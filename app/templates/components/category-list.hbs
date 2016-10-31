@@ -1,0 +1,8 @@
+<select id="sortCategories" {{action 'sortedCategoriesChange' on='change'}}>
+  <option value="name:desc">Name Descending</option>
+  <option value="name">Name Ascendin`g</option>
+</select>
+
+{{#each sortedCategories as |category|}}
+  <h3>{{#link-to "category" category.id}}  {{category.name}} {{/link-to}} ({{category.listings.length}})</h3>
+{{/each}}
