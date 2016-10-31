@@ -2,7 +2,12 @@
   <option value="date:desc">Date Descending</option>
   <option value="date">Date Ascending</option>
 </select>
+<div class="listingPages">
+  {{#each pages as |page|}}
+  <h1 class="btn btn-info" {{action "getPage" page}}>[{{page}}] </h1>
+  {{/each}}
+</div>
 
-{{#each pageListings as |listing|}}
-  {{listing-tile listing=listing}}
-{{/each}}
+  {{#each pageListings as |listing|}}
+    {{listing-tile listing=listing}}
+  {{/each}}
