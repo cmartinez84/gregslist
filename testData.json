@@ -1,0 +1,21 @@
+{"categories": [
+  {
+    "name": "Job Postings"
+  },
+  {
+    "name": "Housing"
+  },
+  {
+    "name": "Miscellaneous"
+  }
+],
+"listings" : [
+  {
+    "title": "Lost feret",
+    "date": "2000-11-11",
+    "image": "https://s-media-cache-ak0.pinimg.com/564x/fc/45/9a/fc459a706b4f9fa3f1ebd11caf215824.jpg",
+    "content": "i lost my feret on a cold damp night",
+    "author": "Chris"
+  }
+]
+}

@@ -1,0 +1,12 @@
+<div class="well">
+  <label for="">Title</label>
+  {{input value=title id="title"}}
+  <label for="">Image</label>
+  {{input value=image id="image"}}
+  <label for="">Content</label>
+  {{input value=content id="content"}}
+  <label for="">Author</label>
+  {{input value=author id="author"}}
+  <button {{action "post" category}}>Add listing</button>
+</div>
+{{category.name}}
